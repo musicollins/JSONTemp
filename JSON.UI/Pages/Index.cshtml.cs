@@ -2,25 +2,32 @@
 using JSON.UI.DTOs;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace JSON.UI.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly IDataAccess _dataAccess;
+        private readonly IApiDataAccess _dataAccess;
 
-        public IndexModel(IDataAccess dataAccess)
+        public List<MovieDTO> Movies { get; private set; }
+
+        public IndexModel(IApiDataAccess dataAccess)
         {
-            NAME = "John";
+            Movies = new List<MovieDTO>();
             _dataAccess = dataAccess;
         }
 
-        public IEnumerable<MovieDTO> Movies { get; private set; }
-        public string NAME { get; private set; }
 
-        public void OnGet()
+        public async Task OnGet()
         {
-            Movies = _dataAccess.GetAll();
+            var movies = await _dataAccess.GetAll();
+            if (movies != null)
+            {
+                Movies = movies.Cast<MovieDTO>().ToList();
+
+            }
         }
 
 

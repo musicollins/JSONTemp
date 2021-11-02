@@ -7,8 +7,17 @@
 <div class="container">
     <div class="card-deck">
         @foreach (var movie in Model.Movies)
-        {
-            <h1>@movie.Title</h1>
+        { 
+            <div class="card" style="min-width: 18rem;">
+                <img class="card-img-top" src="@movie.PosterPath" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@movie.Title</h5>
+                    <p class="card-text">@movie.Overview</p>
+                    <a asp-page="/Movies/Movie" asp-route-Id="@movie.Id" class="btn btn-primary">More Info</a>
+                </div>
+            </div>
         }
+
+
     </div>
 </div>

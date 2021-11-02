@@ -13,7 +13,13 @@ namespace JSON.UI.DTOs
         public string Language { get; set; }
         [JsonProperty("overview")]
         public string Overview { get; set; }
+        private string _posterPath;
         [JsonProperty("poster_path")]
-        public string PosterPath { get; set; }
+        public string PosterPath
+        {
+            get { return _posterPath; }
+            set { _posterPath = "https://image.tmdb.org/t/p/w500" + value; }
+        }
+
     }
 }

@@ -1,5 +1,27 @@
 ﻿{
   "page": 1,
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Ralph",
+      "lastname": "Milan"
+    },
+    {
+      "id": 2,
+      "firstname": "John",
+      "lastname": "Smith"
+    },
+    {
+      "id": 3,
+      "firstname": "Anna",
+      "lastname": "Lindgren"
+    },
+    {
+      "id": 4,
+      "firstname": "Hanzo",
+      "lastname": "Haachi"
+    }
+  ],
   "results": [
     {
       "adult": false,
