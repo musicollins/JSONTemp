@@ -1,0 +1,10 @@
+﻿@page
+@model JSON.UI.Pages.ProductModel
+@{
+}
+
+<h1>PRODUCTS</h1>
+@foreach (var product in Model.Products)
+{
+    <h3>@product.ProductName</h3>
+}

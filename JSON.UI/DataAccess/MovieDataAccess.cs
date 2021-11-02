@@ -1,11 +1,8 @@
-﻿using JSON.DataSource;
-using JSON.UI.DTOs;
+﻿using JSON.UI.DTOs;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Linq;
 
 namespace JSON.UI.DataAccess
 {

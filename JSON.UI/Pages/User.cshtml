@@ -1,0 +1,11 @@
+﻿@page
+@model JSON.UI.Pages.UserModel
+@{
+}
+
+<h1>USERS</h1>
+
+@foreach (var user in Model.Users)
+{
+    <h3>@user.Name</h3>
+}
