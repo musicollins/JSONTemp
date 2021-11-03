@@ -1,3 +1,4 @@
+using JSON.DataSource;
 using JSON.UI.DataAccess;
 using JSON.UI.DTOs;
 using Microsoft.AspNetCore.Builder;
@@ -23,6 +24,8 @@ namespace JSON.UI
             services.AddSingleton<IApiDataAccess, MovieDataAccess>();
             services.AddSingleton<IDataAccess<UserDTO>, UserDataAccess>();
             services.AddSingleton<IDataAccess<ProductDTO>, ProductDataAccess>();
+            services.AddSingleton<IDataAccess<MovieDTO>, MoviesDataAccess>();
+            services.AddSingleton<JSONDataSource>();
             services.AddRazorPages();
             
         }
